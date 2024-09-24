@@ -1,0 +1,183 @@
+/* Basic CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.heading {
+    font-size: 25px;
+    font-style: italic;
+    color: azure;
+}
+
+.content {
+    /* background-color: burlywood; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    margin-top: 5vh;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.part {
+    width: 90%;
+    max-width: 600px;
+    background-color: aliceblue;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+    border: solid black;
+}
+
+.part1 {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    justify-content: center;
+}
+
+.display1 {
+    flex-grow: 1;
+    height: 5vh;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.display2 {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.display2:hover {
+    background-color: #555;
+}
+
+.part2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    /* border: solid black; */
+    border-radius: 5px;
+    background-color: white;
+}
+
+.task-content {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+.checking{
+    margin-right: 15px;
+    /* background-color: aqua; */
+    height: 10px;
+    
+}
+
+
+.edit-button,
+.delete-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.footer {
+    width: 100%;
+    background-color: blueviolet;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer h3 {
+    color: whitesmoke;
+    margin: 0;
+}
+
+
+ .task-input{
+    height: 5vh;
+    border: 1px;
+    
+}
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .part {
+        width: 100%;
+        margin: 0 10px;
+    }
+
+    .part1 {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .display1,
+    .display2 {
+        width: 100%;
+    }
+}
+
+@media (min-width: 600px) {
+    .part {
+        width: 40%;
+        margin: 0 10px;
+    }
+
+    .part1 {
+
+        flex-direction:row;
+        gap: 10px;
+    }
+
+    .display1{
+        width: 70%;
+    }
+    .display2 {
+        width: 20%;
+    }
+}
